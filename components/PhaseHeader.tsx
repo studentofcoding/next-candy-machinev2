@@ -155,7 +155,7 @@ export const PhaseHeader = ({ candyMachine, whiteList }: PhaseHeaderProps) => {
           phaseName={`Project`}
           desc={"Project description"}
           date={candyMachine?.state.goLiveDate}
-          status={whiteList ? "White List Activated" : "LIVE"}
+          status={whiteList ? "Welcome whitelisted!" : "LIVE"}
           whiteList={whiteList}
           candyMachine={candyMachine}
         />

@@ -17,10 +17,7 @@ export default function ReactCountdown({
   return (
     <div className="flex flex-row container ">
       <div className="flex flex-col center w-full mx-auto mt-24">
-        <div className="text-center text-4xl font-sans text-white p-20">
-          {/*HEADER IMAGE */}
-        </div>
-        <div className="flex flex-row mx-auto text-gray-600  lg:p-16 p-6 text-center">
+        <div className="flex flex-row mx-auto text-gray-600  lg:p-8 p-3 text-center">
           <div className="flex flex-col">
             <p className="lg:text-6xl  text-3xl text-white font-roboto ">
               {padZeros(days)} :
@@ -44,6 +41,13 @@ export default function ReactCountdown({
               : {padZeros(seconds)}
             </p>
             <p className="lg:pl-6 text-gray-100"> sec.</p>
+          </div>
+        </div>
+        <div className="flex flex-row mx-auto text-gray-300 my-0 text-center">
+          <div className="flex flex-col">
+            <p className="lg:text-3xl  text-1xl text-white font-roboto ">
+             Until public minting
+            </p>
           </div>
         </div>
       </div>
