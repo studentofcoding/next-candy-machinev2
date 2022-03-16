@@ -281,7 +281,7 @@ const Home = (props: HomeProps) => {
         )}
         {!wallet.connected && (
           <div className="text-white font-sans text-center text-4xl mt-36">
-            Connect Wallet <br /> To Initiate Countdown
+            Connect Wallet to Join Verdant Vtopia
           </div>
         )}
         <Snackbar
