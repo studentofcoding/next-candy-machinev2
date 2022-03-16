@@ -1,5 +1,6 @@
 import * as anchor from "@project-serum/anchor";
 import Typography from "@material-ui/core/Typography";
+import Grid from '@material-ui/core/Grid';
 import { CandyMachineAccount } from "../helpers/candy-machine";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import useWalletBalance from "../hooks/useWalletBalance";
@@ -47,19 +48,23 @@ export const DarkContainer = ({
           fontSize: 18,
         }}
       >
-        <div className="flex flex-col mr-4">
-          <div>Price</div>
-          <div className="text-l font-normal">
-            {whiteList && discountPrice
+        <Grid container direction="row" wrap="nowrap">
+          <Grid container direction="column">
+            <Typography variant="body2" color="textSecondary">
+              Price
+            </Typography>
+            <Typography
+              variant="h6"
+              color="textPrimary"
+              style={{ fontWeight: 'bold' }}
+            >
+              ◎ &nbsp;
+              {whiteList && discountPrice
               ? discountPrice / LAMPORTS_PER_SOL
               : normalPrice / LAMPORTS_PER_SOL}
-            &nbsp; SOL
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <div>Balance</div>{" "}
-          <div className="text-l font-normal">{balance} &nbsp; SOL</div>
-        </div>
+            </Typography>
+          </Grid>
+        </Grid>
       </div>
     );
   } else {
@@ -104,7 +109,7 @@ const Header = (props: {
         >
           {phaseName} &nbsp;
           <small style={{ fontSize: 14 }}>
-            ({candyMachine?.state.itemsRedeemed})
+            {candyMachine?.state.itemsRedeemed} / 4444
           </small>
         </Typography>
         <Typography variant="body1" color="textSecondary">
@@ -151,14 +156,16 @@ export const PhaseHeader = ({ candyMachine, whiteList }: PhaseHeaderProps) => {
       )}
 
       {phase === Phase.Live && (
-        <Header
-          phaseName={`Project`}
-          desc={"Project description"}
-          date={candyMachine?.state.goLiveDate}
-          status={whiteList ? "Welcome whitelisted!" : "LIVE"}
-          whiteList={whiteList}
-          candyMachine={candyMachine}
-        />
+        <>
+          <Header
+            phaseName={`Mint your own Verdant!`}
+            desc={"Project description"}
+            date={candyMachine?.state.goLiveDate}
+            status={whiteList ? "Welcome whitelisted!" : "LIVE"}
+            whiteList={whiteList}
+            candyMachine={candyMachine}
+          />
+        </>
       )}
     </>
   );

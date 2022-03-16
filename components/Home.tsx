@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Countdown from "react-countdown";
 import Alert from "@material-ui/lab/Alert";
+import Typography from '@material-ui/core/Typography';
 
 import * as anchor from "@project-serum/anchor";
 
@@ -191,10 +192,10 @@ const Home = (props: HomeProps) => {
               }}
             >
               <div className="">
-                <img
+                {/* <img
                   src="/images/.png"
                   className="mb-6 border-2 rounded border-gray-700"
-                />
+                /> */}
               </div>
               <Grid container justifyContent="center" direction="column">
                 <PhaseHeader
@@ -233,11 +234,13 @@ const Home = (props: HomeProps) => {
                         />
                       </GatewayProvider>
                     ) : (
-                      <MintButton
-                        candyMachine={candyMachine}
-                        isMinting={isMinting}
-                        onMint={onMint}
-                      />
+                      <>
+                        <MintButton
+                          candyMachine={candyMachine}
+                          isMinting={isMinting}
+                          onMint={onMint}
+                        />
+                      </>
                     )}
                   </MintContainer>
                 </>
