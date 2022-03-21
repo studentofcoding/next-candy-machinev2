@@ -7,6 +7,8 @@ import Grid from "@material-ui/core/Grid";
 import Countdown from "react-countdown";
 import Alert from "@material-ui/lab/Alert";
 import Typography from '@material-ui/core/Typography';
+import Image from 'next/image'
+import vv_gif from '../public/vv.gif'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -267,7 +269,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <div className="bg-container">
-      <Container style={{ marginTop: 100 }}>
+      <Container style={{ margin: 100 }}>
         {candyMachineGoLive && wallet.connected && (
           <Countdown
             date={isSPLExists ? 1640199600000 : candyMachineGoLive}
@@ -280,9 +282,19 @@ const Home = (props: HomeProps) => {
           </div>
         )}
         {!wallet.connected && (
-          <div className="text-white font-sans text-center text-4xl mt-36">
-            Connect Wallet to Join Verdant Vtopia
-          </div>
+          <Container className="container-centered">
+            <div className="font-aeonik-bold text-white font-sans text-center text-5xl m-8">
+              Connect Wallet to Mint Verdant Vtopia
+            </div>
+            <div className="text-white font-sans text-center text-4xl m-8">
+            <Image
+              src={vv_gif}
+              alt="Verdant Vtopia sample gif"
+              width={500}
+              height={500}
+            />
+            </div>
+          </Container>
         )}
         <Snackbar
           open={alertState.open}

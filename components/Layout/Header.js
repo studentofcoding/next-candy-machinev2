@@ -10,7 +10,7 @@ export default function Header() {
       <div className="mr-auto pl-3">
         <Link
           passHref
-          href="https://google.com"
+          href="https://mint.verdantvtopia.art/"
           className="hover:cursor-pointer"
         >
           <a
@@ -19,7 +19,8 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
             className="font-monstmedium text-white block uppercase lg:inline-block px-4 lg:mr-2 hover:text-indigo-500"
           >
-            <span className="text-white ml-4"> |</span>
+            <span className="text-white ml-4"></span>
+            <img height="60" width="60" alt="Verdant Vtopia" src="./icon_fix.png"/>
           </a>
         </Link>
         <Link passHref href="/" className="hover:cursor-pointer">
@@ -67,7 +68,7 @@ export default function Header() {
           />
         </a> */}
 
-        <div className="mt-3 ml-3 lg:flex hidden">
+        <div className="mt-3 ml-3 lg:flex">
           <WalletMultiButton />
         </div>
       </div>
@@ -83,9 +84,9 @@ export default function Header() {
   return (
     <>
       <Head>
-        <title>fill in</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/images/favicon.ico" />
+        <title>Verdant Vtopia Minting Site</title>
+        <meta name="description" content="Collection of 4444 detailed and beautiful architectural NFT with staking to get $VERDANT." />
+        <link rel="icon" href="/icon_fix.png" />
       </Head>
 
       <div id="header" className="w-full z-10 absolute top-0 ">
