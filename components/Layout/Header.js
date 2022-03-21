@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Head from "next/head";
+import Image from 'next/image'
+import vv_icon from '../../public/icon_fix.png'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -17,10 +19,16 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
             onClick={() => setMobileMenuOpen(false)}
-            className="font-monstmedium text-white block uppercase lg:inline-block px-4 lg:mr-2 hover:text-indigo-500"
+            className="mt-5 font-monstmedium text-white block uppercase lg:inline-block px-4 lg:mr-2 hover:text-indigo-500"
           >
-            <span className="text-white ml-4"></span>
-            <img height="60" width="60" alt="Verdant Vtopia" src="./icon_fix.png"/>
+            {/* <span className="text-white ml-4"></span> */}
+            <Image
+              src={vv_icon}
+              alt="Verdant Vtopia"
+              width={60}
+              height={60}
+            />
+            {/* <img height="60" width="60" alt="Verdant Vtopia" src="./icon_fix.png"/> */}
           </a>
         </Link>
         <Link passHref href="/" className="hover:cursor-pointer">
