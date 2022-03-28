@@ -46,36 +46,6 @@ export default function Header() {
       </div>
 
       <div className="flex lg:flex-row flex-col">
-        {/* <a
-          onClick={() => setMobileMenuOpen(false)}
-          className="font-link block lg:inline-block px-4 py-4 mx-2 lg:mx-0 lg:ml-2 font-bold text-white bg-purple-600 rounded-full hover:bg-purple-500"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/discord-logo.svg"
-            style={{ color: "#fff" }}
-            height="40px"
-            width="40px"
-            alt="discord"
-          />
-        </a>
-        <a
-          onClick={() => setMobileMenuOpen(false)}
-          className="font-link block lg:inline-block px-4 py-4 mx-2 lg:mx-0 lg:ml-2 font-bold text-white bg-purple-600 rounded-full hover:bg-purple-500"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/twitter-logo.svg"
-            height="40px"
-            width="40px"
-            alt="twitter"
-          />
-        </a> */}
-
         <div className="mt-3 ml-3 lg:flex">
           <WalletMultiButton />
         </div>
@@ -84,7 +54,7 @@ export default function Header() {
   );
 
   const mobileMenu = (
-    <nav className="lg:hidden fixed right-0 bottom-0 bg-opacity-75 top-12 w-full bg-indigo-900 shadow-lg z-20 pt-12">
+    <nav className="lg:hidden fixed right-0 bottom-0 bg-opacity-25 top-12 w-full bg-menu shadow-lg z-20 pt-12">
       {menuItems}
     </nav>
   );

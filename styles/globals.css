@@ -99,3 +99,7 @@ a {
   font-family: "RobotMono";
   src: url("/fonts/RobotoMono.ttf");
 }
+
+.bg-menu {
+  background-color: #70a6a3;
+}

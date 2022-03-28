@@ -269,7 +269,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <div className="bg-container">
-      <Container style={{ margin: 100 }}>
+      <Container>
         {candyMachineGoLive && wallet.connected && (
           <Countdown
             date={isSPLExists ? 1640199600000 : candyMachineGoLive}
@@ -283,7 +283,7 @@ const Home = (props: HomeProps) => {
         )}
         {!wallet.connected && (
           <Container className="container-centered">
-            <div className="font-aeonik-bold text-white font-sans text-center text-5xl m-8">
+            <div className="font-aeonik-bold text-white font-sans text-center text-5xl m-8" style={{marginTop:"100px"}}>
               Connect Wallet to Mint Verdant Vtopia
             </div>
             <div className="text-white font-sans text-center text-4xl m-8">
