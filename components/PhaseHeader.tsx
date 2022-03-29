@@ -109,7 +109,7 @@ const Header = (props: {
         >
           {phaseName} &nbsp;
           <small style={{ fontSize: 14 }}>
-            {candyMachine?.state.itemsRedeemed} / 4444
+            {/* {candyMachine?.state.itemsRedeemed} / 4444 */}
           </small>
         </Typography>
         <Typography variant="body1" color="textSecondary">
