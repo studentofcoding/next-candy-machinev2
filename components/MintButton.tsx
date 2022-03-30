@@ -36,10 +36,10 @@ export const MintButton = ({
   }, [gatewayStatus, clicked, setClicked, onMint]);
   return (
     <CTAButton
-      // disabled={
-      //   candyMachine?.state.isSoldOut || isMinting
-      // }
-      disabled={true}
+      disabled={
+        candyMachine?.state.isSoldOut || isMinting
+      }
+      // disabled={true}
       onClick={async () => {
         setClicked(true);
         if (candyMachine?.state.isActive && candyMachine?.state.gatekeeper) {
@@ -59,8 +59,7 @@ export const MintButton = ({
       ) : isMinting ? (
         <CircularProgress />
       ) : (
-        "MINT WILL BE AVAILABLE IN 1 HOUR"
-        // "MINT"
+        "MINT"
       )}
     </CTAButton>
   );

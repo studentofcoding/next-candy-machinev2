@@ -9,7 +9,7 @@ export default function Header() {
 
   const menuItems = (
     <>
-      <div className="mr-auto pl-3">
+      <div className="mr-auto pl-3 hidden-mobile">
         <Link
           passHref
           href="https://mint.verdantvtopia.art/"
@@ -21,14 +21,12 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
             className="mt-5 font-monstmedium text-white block uppercase lg:inline-block px-4 lg:mr-2 hover:text-indigo-500"
           >
-            {/* <span className="text-white ml-4"></span> */}
             <Image
               src={vv_icon}
               alt="Verdant Vtopia"
               width={60}
               height={60}
             />
-            {/* <img height="60" width="60" alt="Verdant Vtopia" src="./icon_fix.png"/> */}
           </a>
         </Link>
         <Link passHref href="/" className="hover:cursor-pointer">
@@ -45,7 +43,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <div className="flex lg:flex-row flex-col">
+      <div className="flex lg:flex-row flex-col centered-mobile">
         <div className="mt-3 ml-3 lg:flex">
           <WalletMultiButton />
         </div>
@@ -53,11 +51,11 @@ export default function Header() {
     </>
   );
 
-  const mobileMenu = (
-    <nav className="lg:hidden fixed right-0 bottom-0 bg-opacity-25 top-12 w-full bg-menu shadow-lg z-20 pt-12">
-      {menuItems}
-    </nav>
-  );
+  // const mobileMenu = (
+  //   <nav className="fixed right-0 bottom-0 bg-opacity-25 top-12 w-full bg-menu shadow-lg z-20 pt-12">
+  //     {menuItems}
+  //   </nav>
+  // );
 
   return (
     <>
@@ -70,7 +68,7 @@ export default function Header() {
       <div id="header" className="w-full z-10 absolute top-0 ">
         <div>
           <div className="container mx-auto flex justify-between items-center px-4 h-14 lg:h-16 ">
-            <button
+            {/* <button
               className="lg:hidden text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -88,11 +86,11 @@ export default function Header() {
                   d="M4 8h16M4 16h16"
                 />
               </svg>
-            </button>
+            </button> */}
 
-            {mobileMenuOpen ? mobileMenu : ""}
+            {/* {mobileMenuOpen ? mobileMenu : ""} */}
 
-            <div className="hidden lg:flex items-center w-full " id="links">
+            <div className="lg:flex mx-auto centered-mobile items-center w-full " id="links">
               {menuItems}
             </div>
           </div>

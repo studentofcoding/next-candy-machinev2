@@ -103,3 +103,13 @@ a {
 .bg-menu {
   background-color: #70a6a3;
 }
+
+@media screen and (max-width: 768px) {
+  .centered-mobile {
+    width: 100%;
+    text-align: center;
+  }
+  .hidden-mobile {
+    display: none;
+  }
+}
