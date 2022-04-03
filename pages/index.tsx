@@ -36,7 +36,7 @@ console.log(network, rpcHost);
 const startDateSeed = parseInt(process.env.NEXT_PUBLIC_CANDY_START_DATE!, 10);
 
 // const txTimeout = 30000;
-const txTimeout = 5000; // milliseconds (confirm this works for your project)
+const txTimeout = 60000; // milliseconds (confirm this works for your project)
 
 const App = () => {
   return (

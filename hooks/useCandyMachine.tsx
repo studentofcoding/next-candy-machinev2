@@ -31,7 +31,7 @@ const rpcHost = process.env.NEXT_PUBLIC_SOLANA_RPC_HOST!;
 const connection = new anchor.web3.Connection(rpcHost);
 
 // const txTimeout = 30000;
-const txTimeout = 5000;
+const txTimeout = 60000;
 
 export default function useCandyMachine() {
   const [, setBalance] = useWalletBalance();
