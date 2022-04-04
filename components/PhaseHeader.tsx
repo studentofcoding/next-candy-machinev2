@@ -109,7 +109,7 @@ const Header = (props: {
         >
           {phaseName} &nbsp;
           <small style={{ fontSize: 14 }}>
-            {candyMachine?.state.itemsRedeemed} / 4444
+            {/* {candyMachine?.state.itemsRedeemed} / 4444 */}
           </small>
         </Typography>
         <Typography variant="body1" color="textSecondary">
@@ -158,7 +158,7 @@ export const PhaseHeader = ({ candyMachine, whiteList }: PhaseHeaderProps) => {
       {phase === Phase.Live && (
         <>
           <Header
-            phaseName={`Mint your own Verdant!`}
+            phaseName={`Presale of Verdant is closed!`}
             desc={""}
             date={candyMachine?.state.goLiveDate}
             status={whiteList ? "Welcome whitelisted!" : "LIVE"}
